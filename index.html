@@ -6,6 +6,8 @@
   <!-- Add your own favicon -->
   <link rel="shortcut icon" href="img/favicon.svg">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -13,25 +15,26 @@
   <!-- Create your own logo to add here -->
     <img src="img/logo.svg" alt="Joshua Lewandowski">
     <nav>
-      <ul role="menu-bar">
+      <ul role="menu-bar" class="navigation-list">
         <li role="presentation">
-          <a href="index.html" role="menuitem">Home</a>
+          <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
         </li>
         <li role="presentation">
-          <a href="about.html" role="menuitem">About Me</a>
+          <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
         </li>
         <li role="presentation">
-          <a href="contact.html" role="menuitem">Contact</a>
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
         </li>
       </ul>
       <nav>
       </header>
   <div>
   <!-- Add a photograph of me -->
-    <img src="img/profile_picture.png" alt="A photograph of me.">
+    <img src="img/profile_picture.png" alt="A photograph of me." class="profile_picture">
   <h1>Hello World!</h1>
   <p>My name is Joshua Lewandowski, a beginning web developer from the East Coast.</p>
   <a href="#">Check out some of my code</a>
+  <button type="button" name="button">Default Button</button>
   </div>
   <footer>
     <p>Find me on</p>
