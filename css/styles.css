@@ -96,6 +96,13 @@ footer {
   display: inline-block;
   margin-left: 15px;
 }
+.navigation-list__item--active {
+  border-style: solid;
+  border-color: #357b70;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  text-decoration: none;
+}
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
