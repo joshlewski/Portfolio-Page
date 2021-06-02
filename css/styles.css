@@ -50,18 +50,22 @@ a:visited {
 a:active {
   color: #489c79;
 }
-button {
+button,
+.button {
   border: none;
+  display: inline-block;
   font-family: inherit;
   background-color: #B0E0E6;
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s opacity;
 }
-button:hover, button:focus {
+button:hover, button:focus,
+.button:hover, .button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -142,4 +146,67 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.about-me {
+  max-width:700px;
+  margin: 0 auto;
+  text-align:center;
+}
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
