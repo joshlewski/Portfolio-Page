@@ -56,18 +56,21 @@ button,
   display: inline-block;
   font-family: inherit;
   background-color: #B0E0E6;
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition-duration: 0.2s opacity;
+  transition: 0.2s opacity;
 }
 button:hover, button:focus,
 .button:hover, .button:focus {
   cursor: pointer;
   opacity: 0.8;
+}
+a.button {
+  color: black;
 }
 footer {
   background-color: #F5F5F5;
@@ -128,8 +131,9 @@ footer {
   color: #00675c;
 }
 .about-me {
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
-  margin: 20px;
 }
 .about-table {
   display: flex;
@@ -146,11 +150,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.about-me {
-  max-width:700px;
-  margin: 0 auto;
-  text-align:center;
 }
 @media all and (max-width: 500px) {
   .grid {
