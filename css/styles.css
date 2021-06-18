@@ -6,6 +6,7 @@ nav&footer white smoke: #F5F5F5
 button color powder blue: #B0E0E6
 */
 :root {
+  --body-color: #F8F8FF;
   --nav-color: #F5F5F5;
   --footer-color: #F5F5F5;
   --link-color: #357b70;
@@ -34,7 +35,7 @@ button color powder blue: #B0E0E6
   box-sizing: border-box;
 }
 body {
-  background-color: #F8F8FF;
+  background-color: var(--body-color);
   font-family: var(--body-font-family);
   font-weight: var(--body-font-weight);
   font-size: var(--body-font-size);
