@@ -31,9 +31,11 @@ button color powder blue: #B0E0E6
   --sun-middle: #fcffad;
   --sun-end: #f76414;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: var(--body-color);
   font-family: var(--body-font-family);
@@ -41,40 +43,50 @@ body {
   font-size: var(--body-font-size);
   line-height: 1.6;
 }
+
 nav {
   background-color: var(--nav-color);
 }
+
 h1 {
   font-size: var(--h1-font-size);
   font-weight: var(--h1-font-weight);
   text-align: center;
 }
+
 h2 {
   font-size: var(--h2-font-size);
   font-weight: var(--h2-font-weight);
   text-align: center;
 }
+
 h3 {
   font-size: var(--h3-font-size);
   font-weight: var(--h3-font-weight);
 }
+
 .profile_picture {
   width: 250px;
   float: left;
   border-radius: 50%;
 }
+
 a {
   color: var(--link-color);
 }
+
 a:hover {
   text-decoration: none;
 }
+
 a:visited {
   color: var(--link-visited);
 }
+
 a:active {
   color: var(--link-active);
 }
+
 button,
 .button {
   border: none;
@@ -85,27 +97,35 @@ button,
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
   border-bottom: 2px solid var(--button-border);
   transition: 0.2s opacity;
 }
-button:hover, button:focus,
-.button:hover, .button:focus {
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
+
 a.button {
   color: var(--button-text);
 }
+
 footer {
   background-color: var(--footer-color);
 }
+
 .page-footer {
   clear: both;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -113,26 +133,32 @@ footer {
   padding-top: 10%;
   padding-bottom: 10%;
 }
+
 .page-header {
   display: flex;
   width: 100%;
   padding: 20px;
   background-color: var(--nav-color);
 }
+
 .page-header__item {
   flex: 0 1 200px;
 }
+
 .page-header__item:last-child {
   flex-grow: 1;
   text-align: right;
 }
+
 .navigation-list {
   list-style-type: none;
 }
+
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
 }
+
 .navigation-list__item--active {
   border-style: solid;
   border-color: var(--nav-text-border);
@@ -140,100 +166,124 @@ footer {
   border-right-width: 1px;
   text-decoration: none;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
+
 .grid__item {
   background-color: var(--grid-color);
   padding-bottom: 20px;
 }
+
 .social-media a {
   text-decoration: none;
 }
+
 .social-media img:hover {
   transform: scale(1.5);
 }
+
 .grid__item a {
   color: var(--grid-link);
 }
+
 .about-me {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
 }
+
 .about-table {
   display: flex;
   justify-content: center;
 }
+
 .contact {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding-bottom: 20px;
 }
+
 .contact-form {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
-@media all and (min-width: 500px) and (max-width: 750px){
+
+@media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media all and (max-width: 750px) {
   .grid {
     grid-gap: 10px;
   }
+
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+
   h1 {
     font-size: 22px;
   }
 }
+
 @keyframes color-change {
   0% {
     fill: var(--sun-initial);
   }
+
   50% {
     fill: var(--sun-middle);
   }
+
   100% {
     fill: var(--sun-end);
   }
 }
+
 .sun {
   animation: 4s color-change infinite alternate linear;
 }
+
 @keyframes cloud-move {
   from {
     transform: translate(0, 50px);
   }
+
   to {
     transform: translate(200px, 50px);
   }
 }
+
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
 }
+
 @keyframes cloud-move-reverse {
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
 }
+
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
